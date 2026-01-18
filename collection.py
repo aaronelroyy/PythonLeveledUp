@@ -10,7 +10,7 @@ print(my_counter.most_common(2)[0][1])  # returns a list with tuples within
 print(list(my_counter.elements()))
 
 """
-()-> refers to number of most common items the users wants to be displayes
+()-> refers to number of most common items the users wants to be display
 [0]-> refers to the index of the multiple tuples
 [1]-> refers to the index of the element within the tuple
 """
