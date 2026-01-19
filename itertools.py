@@ -59,19 +59,6 @@ group_obj = gb(g, key=smaller_than)
 for key, value in group_obj:
     print(key, list(value))
 
-from itertools import groupby as gb
-
-g = [1, 2, 3, 4]
-
-
-def smaller_than(x):
-    return x < 3
-
-
-group_obj = gb(g, key=smaller_than)
-for key, value in group_obj:
-    print(key, list(value))
-
 persons = [
     {"name": "Tim", "age": 25},
     {"name": "Dan", "age": 25},
