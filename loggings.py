@@ -46,3 +46,5 @@ logger.error("this is an error")
        shows on screen              writes to file.log
 
 """
+
+# named loggers propagate to root by default.
