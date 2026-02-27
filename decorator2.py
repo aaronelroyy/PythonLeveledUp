@@ -4,11 +4,13 @@ import functools
 def repeat(num_times):
     def decorator_repeat(func):
         @functools.wraps(func)
-        def wrapper (*args, **kwargs):
+        def wrapper(*args, **kwargs):
             for _ in range(num_times):
                 result = func(*args, *kwargs)
             return result
+
         return wrapper
+
     return decorator_repeat
 
 
@@ -18,7 +20,8 @@ def greet(name):
 
 
 def main():
-    greet('alex')
+    greet("alex")
+
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,6 @@
-
 class CountCalls:
 
-    def __init__(self,func):
+    def __init__(self, func):
         self.func = func
         self.num_calls = 0
 
@@ -13,7 +12,8 @@ class CountCalls:
 
 @CountCalls
 def say_hello():
-    print('hello')
+    print("hello")
+
 
 say_hello()
 say_hello()

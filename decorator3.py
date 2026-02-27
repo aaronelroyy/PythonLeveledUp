@@ -1,16 +1,21 @@
-#function decorator
+# function decorator
 
 import functools
+
 
 def start_end_decorator(func):
 
     @functools.wraps(func)
-    def wrapper(*args, **kwargs): #should contain the number of arguments the function has
-        print('start')
-        result=func(*args, **kwargs)
-        print('end')
+    def wrapper(
+        *args, **kwargs
+    ):  # should contain the number of arguments the function has
+        print("start")
+        result = func(*args, **kwargs)
+        print("end")
         return result
+
     return wrapper
+
 
 def debug(func):
     @functools.wraps(func)
@@ -22,13 +27,16 @@ def debug(func):
         result = func(*args, **kwargs)
         print(f"{func.__name__!r} returned {result!r}")
         return result
+
     return wrapper
+
 
 @debug
 @start_end_decorator
 def say_hello(name):
-    greeting = f'hello, {name}'
+    greeting = f"hello, {name}"
     print(greeting)
     return greeting
 
-say_hello('Alex')
+
+say_hello("Alex")
