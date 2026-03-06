@@ -32,3 +32,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# add -> wrapper -> function -> original_add
+
+# wrapper func should run at call time not file load time hence we say return wrapper at laod time to define the warpper
