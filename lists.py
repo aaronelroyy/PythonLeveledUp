@@ -49,7 +49,17 @@ list_cpy = list_org  # refer to same list in memory
 # modifying copy results in modification in original
 
 """
-=list_org.cpy()
+=list_org.copy() 
+=import copy copy.copy(__) copy.deepcopy
 =list(list_org)
 =list_org[:]
 """
+
+def local(a_list):
+    a_list += [200,300,400]
+    a_list.append(-4)
+    a_list.insert(2,"a")
+
+o_list = [10,77,-5,4]
+local(o_list)
+print(o_list)
